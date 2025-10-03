@@ -9,10 +9,10 @@
 
 main:
   - title: "Notes"
-    url: /Notes/
+    url: /notes/
 
   - title: "Data"
-    url: /Data/    
+    url: /data/    
     
   - title: "CV"
     url: /cv/
