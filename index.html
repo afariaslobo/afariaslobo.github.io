@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Agustín Farías Lobo — M.A. Candidate in Economics, Universidad de Chile">
+<meta name="theme-color" content="#1565c0">
+<title>Agustín Farías Lobo</title>
+<style>
+  :root {
+    --primary: #1565c0;
+    --primary-dark: #0d47a1;
+    --text: #333;
+    --text-muted: #666;
+    --bg: #ffffff;
+    --bg-alt: #f8f9fa;
+    --border: #e5e5e5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--bg);
+  }
+
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; color: var(--primary-dark); }
+
+  /* Navigation */
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0.9rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav.topnav .brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  nav.topnav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  nav.topnav ul a {
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  nav.topnav ul a:hover { color: var(--primary); text-decoration: none; }
+
+  /* Hero / About */
+  section.hero {
+    background: var(--bg-alt);
+    padding: 4rem 2rem;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .avatar-card {
+    text-align: center;
+  }
+  .avatar-card img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .avatar-card .links {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+  .avatar-card .links a { color: var(--text-muted); }
+  .avatar-card .links a:hover { color: var(--primary); text-decoration: none; }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .hero-text .role {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+
+  /* Sections */
+  section.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+  }
+  section.content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    color: var(--text);
+  }
+
+  /* Item card */
+  .item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .item h3 a { color: var(--text); }
+  .item h3 a:hover { color: var(--primary); }
+  .item .venue {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .item .coauthors {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .item p.summary {
+    color: #444;
+    margin: 0.6rem 0;
+  }
+  .item .actions {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .item .actions a {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--primary);
+  }
+  .item .actions a:hover {
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+  }
+
+  .placeholder-note {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 1rem 0;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .avatar-card { margin: 0 auto; }
+    .hero-text h1 { font-size: 1.9rem; }
+    nav.topnav { padding: 0.8rem 1rem; }
+    nav.topnav ul { gap: 1rem; font-size: 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="brand">Agustín Farías Lobo</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="uploads/cv.pdf">CV</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#working-papers">Working Papers</a></li>
+    <li><a href="#work-in-progress">Work in Progress</a></li>
+    <li><a href="#public-goods">Public Goods</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="about">
+  <div class="hero-inner">
+    <div class="avatar-card">
+      <img src="avatar.jpg" alt="Agustín Farías Lobo" onerror="this.src='https://via.placeholder.com/220x220/1565c0/ffffff?text=Photo'">
+      <div class="links">
+        <a href="mailto:afariasl@fen.uchile.cl" title="Email">✉</a>
+        <a href="https://github.com/afariaslobo" title="GitHub" target="_blank" rel="noopener">⚡</a>
+        <a href="https://x.com/afariaslobo" title="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+      </div>
+    </div>
+    <div class="hero-text">
+      <h1>Agustín Farías Lobo</h1>
+      <div class="role">M.A. Candidate in Economics · Universidad de Chile</div>
+      <p>
+        I am an M.A. candidate in Economics at the Universidad de Chile, expecting to graduate in 2026.
+      </p>
+      <p>
+        My primary field is labor economics.
+      </p>
+      <p>
+        You can reach me at <a href="mailto:afariasl@fen.uchile.cl">afariasl@fen.uchile.cl</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content" id="publications">
+  <h2>Publications</h2>
+  <p class="placeholder-note">No publications to list yet — check back soon.</p>
+</section>
+
+<section class="content" id="working-papers" style="background: var(--bg-alt);">
+  <h2>Working Papers</h2>
+  <p class="placeholder-note">No working papers to list yet — check back soon.</p>
+</section>
+
+<section class="content" id="work-in-progress">
+  <h2>Work in Progress</h2>
+  <p class="placeholder-note">Ongoing projects will be listed here.</p>
+</section>
+
+<section class="content" id="public-goods" style="background: var(--bg-alt);">
+  <h2>Public Goods</h2>
+  <p class="placeholder-note">Tools, teaching materials, and other resources will be listed here.</p>
+</section>
+
+<footer>
+  © <span id="year"></span> Agustín Farías Lobo
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
